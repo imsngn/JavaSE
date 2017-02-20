@@ -1,0 +1,26 @@
+package day04;
+
+
+
+public class CaiQuanGame {
+
+	public ShiTouJianziBu showHand() {
+		java.util.Random r = new java.util.Random();
+		int choice = r.nextInt();
+		choice %= 3;
+		ShiTouJianziBu stjzb01 = new ShiTouJianziBu(choice);
+		return stjzb01;
+	}
+	
+	
+	public ShiTouJianziBu showHandInteractive() {
+		int yourChoice = day04.InterActiveGet.getOneInterger("请出拳：1。剪刀  2。石头  3。布  请输入数字： ");
+		ShiTouJianziBu stjzb02 = new ShiTouJianziBu(yourChoice);
+		return stjzb02;
+
+	}
+	
+	
+	
+
+}

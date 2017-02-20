@@ -1,0 +1,16 @@
+package testMain;
+
+import day04.Employee;
+
+public class testEmployee {
+
+	public static void main(String[] args) {
+		Employee employee01 = new Employee("xiaoming",25,"male","junior engineer", 9000);
+		Employee employee02 = new Employee("xiaohuang",24,"document engineer");
+		Employee employee03 = new Employee();
+		
+		
+
+	}
+
+}

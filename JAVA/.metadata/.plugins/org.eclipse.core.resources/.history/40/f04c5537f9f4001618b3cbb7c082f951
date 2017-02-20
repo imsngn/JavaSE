@@ -1,0 +1,53 @@
+package day04;
+
+import java.util.ArrayList;
+import day04.InterActiveGet;
+public class CaiQuanGame {
+
+	public ShiTouJianziBu showHand() {
+		java.util.Random r = new java.util.Random();
+		int choice = r.nextInt();
+		choice %= 3;
+		ShiTouJianziBu stjzb01 = new ShiTouJianziBu(choice);
+		return stjzb01;
+	}
+	
+	
+	public ShiTouJianziBu showHandInteractive() {
+		int yourChoice = day04.InterActiveGet.getOneInterger("请出拳：1。剪刀  2。石头  3。布  请输入数字： ");
+		ShiTouJianziBu stjzb02 = new ShiTouJianziBu(yourChoice);
+		System.out.println("你出拳： " + stjzb02.getResult());
+		return stjzb02;
+
+	}
+	
+	public static void startGame(){
+		System.out.println("**********************");
+		System.out.println("**      猜拳，开始                 **");
+		System.out.println("**********************");
+		System.out.println("出拳规则：1。剪刀  2。 石头  3。 布"); 
+		//System.out.println("请选择对方角色(1.刘备 2：孙权 3：曹操");
+		ArrayList<String> roles = new ArrayList<String>();
+		roles.add("刘备");
+		roles.add("曹操");
+		roles.add("孙权");
+		int roleNumber = InterActiveGet.getOneInterger("请选择对方角色(1.刘备 2：曹操 3：孙权");
+		String str = InterActiveGet.getOneInputString("请输入你的姓名：");
+		System.out.println(str  + " VS " + roles.get(roleNumber-1) );
+		str = InterActiveGet.getOneInputString("要开始吗？  y/n ");
+		if (str.equals("y")){
+			CaiQuanGame game = new CaiQuanGame();
+			ShiTouJianziBu stjzb01 = game.showHandInteractive();
+			ShiTouJianziBu stjzb02 = game.showHand();
+			System.out.println(str + "出拳： " + stjzb02.getResult() );
+			stjzb01.compare(stjzb02);
+		}
+		else{
+			System.exit(0);
+		}
+	}
+	
+	
+	
+
+}

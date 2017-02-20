@@ -1,0 +1,43 @@
+package testMain;
+
+import java.util.Scanner;
+
+public class testCaiQuan {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public void startGame(){
+		System.out.println("**********************");
+		System.out.println("**      猜拳，开始                 **");
+		System.out.println("**********************");
+		System.out.println("出拳规则：1。剪刀  2。 石头  3。 布"); 
+		//System.out.println("请选择对方角色(1.刘备 2：孙权 3：曹操");
+		int roleNumber = getOneInterger("请选择对方角色(1.刘备 2：孙权 3：曹操");
+		
+	}
+	
+	public static int getOneInterger(String prompt) {
+		Scanner input = new Scanner(System.in);
+		System.out.println(prompt);
+		try {
+			int number = input.nextInt();
+			return number;
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("invalid input");
+		} 
+		return 1;
+	}
+	
+	public static String getOneInputString(String prompt){
+		Scanner input = new Scanner(System.in);
+		System.out.println(prompt);
+		
+			String str = input.nextLine();
+			return str;
+		
+	}
+}

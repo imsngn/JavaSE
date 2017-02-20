@@ -1,0 +1,25 @@
+package testMain;
+
+import day04.Employee;
+
+public class testEmployee {
+
+	public static void main(String[] args) {
+		Employee employee01 = new Employee("xiaoming",25,"male","junior engineer", 9000);
+		Employee employee02 = new Employee("xiaohuang",24,"document engineer");
+		Employee employee03 = new Employee();
+		employee03.setAge(32);
+		employee03.setName("mahuateng");
+		employee03.setPosition("chairman");
+		employee03.setSalary(100000);
+		
+		System.out.println(employee01.toString());
+		System.out.println(employee02.toString());
+
+		System.out.println(employee03.toString());
+
+		
+
+	}
+
+}

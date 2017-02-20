@@ -1,0 +1,12 @@
+package testMain;
+
+public class testEmployee {
+
+	public static void main(String[] args) {
+		Employee Employee01 = new Employee("xiaoming",25,"male","junior engineer", 9000);
+		
+		
+
+	}
+
+}

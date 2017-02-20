@@ -1,0 +1,52 @@
+package day04;
+
+import java.util.ArrayList;
+import day04.InterActiveGet;
+import day04.Competition;
+public class CaiQuanGame {
+	private  ArrayList<String> roles = new ArrayList<String>();
+	private int roleNumber;
+	private String userName;
+	private String startButton;
+	
+	
+	public   void main(String[] args){
+		startGame();
+		startButton = InterActiveGet.getOneInputString("要开始吗？  y/n ");
+		System.out.println(startButton);
+		//if (startButton.equals("y")){
+		if (true){
+			System.out.println("here");
+
+			Player player01 = new Player(roles.get(roleNumber-1));
+			Player player02 = new Player(userName);
+			System.out.println(player01.toString());
+			Competition compt  = new Competition(player01,player02);
+			compt.startGuest();
+			compt.competitionResult();
+		}
+		else{
+			System.exit(0);
+		}
+	}
+
+	public   void startGame(){
+		roles.add("刘备");
+		roles.add("曹操");
+		roles.add("孙权");
+		
+		System.out.println("**********************");
+		System.out.println("**      猜拳，开始                 **");
+		System.out.println("**********************");
+		System.out.println("出拳规则：1。剪刀  2。 石头  3。 布"); 
+		
+		this.roleNumber = InterActiveGet.getOneInterger("请选择对方角色(1.刘备 2：曹操 3：孙权");
+		this.userName  = InterActiveGet.getOneInputString("请输入你的姓名：");
+		System.out.println(this.userName  + " VS " + this.roles.get(roleNumber-1) );
+		
+	}
+	
+	
+	
+
+}

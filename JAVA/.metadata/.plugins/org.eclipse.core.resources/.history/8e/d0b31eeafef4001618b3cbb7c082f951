@@ -1,0 +1,47 @@
+package day04;
+
+import java.util.ArrayList;
+import day04.InterActiveGet;
+import day04.Competition;
+public class CaiQuanGame {
+
+	public  void startGame(){
+		System.out.println("**********************");
+		System.out.println("**      猜拳，开始                 **");
+		System.out.println("**********************");
+		System.out.println("出拳规则：1。剪刀  2。 石头  3。 布"); 
+		ArrayList<String> roles = new ArrayList<String>();
+		roles.add("刘备");
+		roles.add("曹操");
+		roles.add("孙权");
+		int roleNumber = InterActiveGet.getOneInterger("请选择对方角色(1.刘备 2：曹操 3：孙权");
+	
+		String str = InterActiveGet.getOneInputString("请输入你的姓名：");
+		
+		Player player01 = new Player(roles.get(roleNumber-1));
+		Player player02 = new Player(str);
+		Competition compt  = new Competition(player01,player02);
+		
+		
+		
+		
+
+		
+		
+		System.out.println(str  + " VS " + roles.get(roleNumber-1) );
+		
+		
+		str = InterActiveGet.getOneInputString("要开始吗？  y/n ");
+		if (str.equals("y")){
+			
+			
+		}
+		else{
+			System.exit(0);
+		}
+	}
+	
+	
+	
+
+}

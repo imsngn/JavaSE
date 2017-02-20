@@ -1,0 +1,59 @@
+package day04;
+
+public class competition {
+	private Player player01 = new Player();
+	private String player02;
+	private int times;
+	private int score01;
+	private int score02;
+	public String getPlayer01() {
+		return player01;
+	}
+	public void setPlayer01(String player01) {
+		this.player01 = player01;
+	}
+	public String getPlayer02() {
+		return player02;
+	}
+	public void setPlayer02(String player02) {
+		this.player02 = player02;
+	}
+	public int getTimes() {
+		return times;
+	}
+	public void setTimes(int times) {
+		this.times = times;
+	}
+	public int getScore01() {
+		return score01;
+	}
+	public void setScore01(int score01) {
+		this.score01 = score01;
+	}
+	public int getScore02() {
+		return score02;
+	}
+	public void setScore02(int score02) {
+		this.score02 = score02;
+	}
+	public competition(String player01, String player02) {
+		super();
+		this.player01 = player01;
+		this.player02 = player02;
+	}
+	
+	
+	public void competitionResult() {
+		System.out.println(player01 + " VS " + player02);
+		System.out.println("对战次数  " + times);
+		System.out.println("姓名                       "+"得分");
+		System.out.println();
+	}
+	
+	
+	
+	
+	
+	
+
+}

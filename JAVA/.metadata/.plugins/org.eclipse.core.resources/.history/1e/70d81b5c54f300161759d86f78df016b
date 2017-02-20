@@ -1,0 +1,54 @@
+package day04;
+
+import java.math.BigDecimal;
+
+public class BankAccount {
+	private String account;
+	private String password;
+	private String sex;
+	private String location;
+	private String mobileNumber;
+	private double balance;
+	
+	
+
+	public BankAccount(String account, String password, String sex, String location, String mobileNumber,
+			double balance) {
+		super();
+		this.account = account;
+		this.password = password;
+		this.sex = sex;
+		this.location = location;
+		this.mobileNumber = mobileNumber;
+		this.balance = balance;
+	}
+
+	public BankAccount() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [account=" + account + ", mobileNumber=" + mobileNumber + ", balance=" + balance + "]";
+	}
+	
+	public BankAccount deposit(double amount){
+		BigDecimal b1 = new BigDecimal(Double.toString(balance));
+		BigDecimal b2 = new BigDecimal(Double.toString(amount));
+		this.balance = b1.add(b2).doubleValue();
+		return this;
+	}
+
+	public BankAccount withDrawal(double amount){
+		BigDecimal b1 = new BigDecimal(Double.toString(balance));
+		BigDecimal b2 = new BigDecimal(Double.toString(amount));
+		if (b1.compareTo(b2) < 0) {
+			System.out.println("ÄúµÄÓà¶î²»×ã");
+			return this;
+		}
+		
+		this.balance  = b1.subtract(b2).doubleValue();
+		return this;
+	}
+
+}

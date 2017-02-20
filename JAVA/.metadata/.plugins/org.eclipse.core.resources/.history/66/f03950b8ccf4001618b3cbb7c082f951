@@ -1,0 +1,13 @@
+package day04;
+import  day04.Addition;
+public class testAddition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(add(1,2));
+		
+
+	}
+
+}

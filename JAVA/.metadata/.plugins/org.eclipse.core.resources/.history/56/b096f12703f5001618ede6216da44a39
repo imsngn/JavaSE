@@ -1,0 +1,32 @@
+package testMain;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import day04.Competition;
+import day04.Player;
+
+public class testCaiQuan {
+
+	
+	public   void main(String[] args){
+		//startGame();
+		
+
+		//if (startButton.equals("y")){
+			System.out.println("here");
+
+			Player player01 = new Player(roles.get(roleNumber-1));
+			Player player02 = new Player(userName);
+			System.out.println(player01.toString());
+			Competition compt  = new Competition(player01,player02);
+			compt.startGuest();
+			compt.competitionResult();
+		//}
+		//else{
+		//	System.exit(0);
+		//}
+	}
+	
+
+}

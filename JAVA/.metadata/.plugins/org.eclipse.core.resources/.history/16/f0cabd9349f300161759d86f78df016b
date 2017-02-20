@@ -1,0 +1,29 @@
+package testMain;
+
+import Day03.Point;
+
+public class TestPoint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Point p = new Point();
+		
+		System.out.println("p x-axis value is " + p.getX());
+		System.out.println("p y-axis value is " + p.getY());
+		System.out.println("p 的坐标： "+ p.toString());
+		
+		p.setX(11.2);
+		p.setY(27.6);
+		System.out.println("p x-axis value is " + p.getX());
+		System.out.println("p y-axis value is " + p.getY());
+		System.out.println("p 的坐标： "+ p.toString());
+		
+		
+		
+		Point p1 = new Point(17.0,25.0);
+		System.out.println("p1 x-axis value is " + p1.getX());
+		System.out.println("p1 y-axis value is " + p1.getY());
+		System.out.println("p1 的坐标： "+ p1.toString());
+	}
+
+}

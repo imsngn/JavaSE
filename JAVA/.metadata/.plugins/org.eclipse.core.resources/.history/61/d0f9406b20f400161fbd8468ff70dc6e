@@ -1,0 +1,33 @@
+package day04;
+
+public class Employee {
+	private String name;
+	private int age;
+	private String sex;
+	private String position;
+	private double salary;
+	
+	
+	public String getName(){
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age){
+		this.age = age;
+	}
+	public Employee() {
+		// TODO Auto-generated constructor stub
+		this.sex = "female";
+		this.salary =  5000.0;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,35 @@
+package testMain;
+
+import java.util.ArrayList;
+import day04.Player;
+import java.util.Scanner;
+
+import day04.CaiQuanGame;
+import day04.Competition;
+
+public class testCaiQuan {
+
+	
+	
+	public   void main(String[] args){
+		CaiQuanGame game = new CaiQuanGame();
+		game.startGame();
+		
+
+		if (game.startButton.equals("y")){
+			System.out.println("here");
+
+			Player player01 = new Player(roles.get(roleNumber-1));
+			Player player02 = new Player(userName);
+			System.out.println(player01.toString());
+			Competition compt  = new Competition(player01,player02);
+			compt.startGuest();
+			compt.competitionResult();
+		}
+		else{
+			System.exit(0);
+		}
+	}
+	
+
+}

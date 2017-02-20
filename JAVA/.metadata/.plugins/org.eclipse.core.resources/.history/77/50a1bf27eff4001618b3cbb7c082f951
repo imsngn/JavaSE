@@ -1,0 +1,50 @@
+package day04;
+
+public class ShiTouJianziBu {
+	private String stone = "石头";
+	private String  scissor = "剪刀";
+	private String cloth = "布";
+
+	private String result;
+	
+	public String compare(ShiTouJianziBu guess01, ShiTouJianziBu guess02){
+		if(guess01.equals(guess02)){
+			return "EQ";
+		}
+		else if(guess01.result.equals(stone) && (guess02.result.equals(scissor))	 ) {
+			return "BT";
+		}
+		else if(guess01.result.equals(stone) && (guess02.result.equals(cloth))	 ) {
+			return "LT";
+		}
+		else if(guess01.result.equals(scissor) && (guess02.result.equals(stone))	 ) {
+			return "LT";
+		}
+		else if(guess01.result.equals(scissor) && (guess02.result.equals(cloth))	 ) {
+			return "BT";
+		}
+		else if(guess01.result.equals(cloth) && (guess02.result.equals(stone))	 ) {
+			return "BT";
+		}
+		else if(guess01.result.equals(cloth) && (guess02.result.equals(scissor))	 ) {
+			return "LT";
+		}
+		else {
+			return  "EQ";
+		}
+
+
+	}
+	
+	public ShiTouJianziBu(int number){
+		switch(number){
+		case 1:
+			this.result = "石头";
+		case 2:
+			this.result = "剪刀";
+		case 3:
+			this.result = "布";
+		}
+		
+	}
+}

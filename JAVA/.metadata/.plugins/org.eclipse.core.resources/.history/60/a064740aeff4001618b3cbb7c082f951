@@ -1,0 +1,31 @@
+package day04;
+
+public class ShiTouJianziBu {
+	private String stone = "石头";
+	private String  scissor = "剪刀";
+	private String cloth = "布";
+
+	private String result;
+	
+	public boolean compare(ShiTouJianziBu guess01, ShiTouJianziBu guess02){
+		if(guess01.equals(guess02)){
+			return true;
+		}
+		else if(guess01.result.equals(anObject) ) {
+			
+		}
+		
+	}
+	
+	public ShiTouJianziBu(int number){
+		switch(number){
+		case 1:
+			this.result = "石头";
+		case 2:
+			this.result = "剪刀";
+		case 3:
+			this.result = "布";
+		}
+		
+	}
+}
