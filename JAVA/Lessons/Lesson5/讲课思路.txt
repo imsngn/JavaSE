@@ -1,0 +1,106 @@
+Object类
+/**
+		 *  public final native Class<?> getClass();得到字节码（.class）文件 java反射机制
+		 *  Returns the runtime class of this {@code Object}
+		 *  返回一个对象运行时的类型（真实类型），
+		 *  
+		 */
+		
+		/**
+		 * public native int hashCode();
+		 * Returns a hash code value for the object. 返回哈希值--认为是地址
+		 * 
+		 */
+		
+		/**
+		 * 判断两个对象是否相等
+		 * public boolean equals(Object obj) {     
+		 *    return (this == obj);  
+		 * }
+		 * a. 对任意的非空的引用x x.equals(x) 应该返回true
+		 * b. 如果a=b,那么b=a;
+		 * c. 如果a=b,b=c; 那么a=c
+		 * d. 一致性  
+		 * e. 对任意的非空引用值x，x.equals(null) 返回false
+		 * 
+		 * == 和 equals 区别：
+		 * 1. 在Object 类里面没有区别
+		 * 2. 在String 里面   == 比较的是地址，
+		 * 而  equals是先比较地址，如果地址不一样，比较内容，内容一样就相等
+		 * 
+		 * invocations: 调用
+		 */
+		
+		/**
+		 *  public String toString()
+		 *  返回一个代表该对象的字符串
+		 *  
+		 *  返回值：getClass().getName() + '@' + Integer.toHexString(hashCode())
+		 *  getClass().getName()： 得到类的全限定名
+		 *  Integer.toHexString(hashCode()): 将哈希值转换成16进制
+		 */
+			
+final关键字
+/**
+ * final 关键字
+ * 可以修饰 字段 属性吗？表示属性的值不能修改
+ * 修饰方法： 方法不能被子类重写
+ * 修饰类： 类不能被继承
+ * @author Administrator
+ *
+ */
+
+1. 面向对象的三个特征：封装 继承 多态
+2. 什么是多态？
+	多态性是指同一操作作用于某一类对象，
+	可以有不同的解释，产生不同的执行结果。
+3. 多态的体现方式
+	在运行时父类或者接口的引用变量可以引用其子类的对象。
+4. 多态实现的前提
+	需要存在继承和实现关系
+	同样的方法调用而执行不同操作、运行不同代码。（重写操作）
+5. 多态的作用
+	多态通过分离做什么和怎么做,
+	从另一个角度将接口和实现进行分离
+	“多态”则消除了类型之间的耦合关系
+	多态的存在提高了程序的扩展性和后期的可维护性
+6. 对象的向上向下转型
+	由子类转型成父类，在继承图上是向上移动的，一般称为向上转型
+	向上转型是从一个较专用类型向较通用类型转换，所以总是安全的，也就是说，子类是父类的一个超集
+	向上转型过程中，类接口中唯一可能发生的事情是丢失方法，而不是获取方法
+	与之相反的操作是向下转型，不安全（可能需要instanceof操作符协助）
+	LSP(liskov替换原则)：子类型必须能够替换掉它们的基类型
+	安全的上转型和LSP的实施，充分体现继承的“is-a”关系
+
+7.  instanceof 运算符
+
+8.  动态绑定与静态绑定
+	多态实现过程：
+	子类重写父类的方法
+	在程序执行前方法已经被绑定，针对java简单的可以理解为程序编译期的绑定（静态绑定）
+	 Java当中的方法只有final，static，private和构造方法是前期绑定的。
+	运行时，根据变量实际引用的对象类型决定调用哪个方法（动态绑定）
+	静态绑定在编译期进行
+		 Person.sayHi();
+	动态绑定在运行期进行
+		 Person  p = new Teacher();
+		 p.sayHi();
+	多态的概念基于对象引用的动态绑定特性
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
