@@ -7,8 +7,8 @@ public class Sheep extends Animal {
 		// TODO Auto-generated method stub
 		System.out.println(getName() + " ³Ô²Ý");
 	}
-	
-	public Sheep(String name){
+
+	public Sheep(String name) {
 		super(name);
 	}
 }
